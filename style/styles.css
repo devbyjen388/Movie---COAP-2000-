@@ -1,0 +1,305 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #333;
+  background: #f2eee9;
+  font-family: "Lora", serif;
+}
+
+main {
+  padding-top: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+  flex: 1;
+}
+h1,
+h2,
+h3 {
+  font-weight: 549;
+  margin: 5px 0;
+}
+h1 {
+  line-height: 1.1;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+a:hover {
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.movie-card img,
+.favorite-scene-card img,
+.about img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.movie-card,
+.favorite-scene-card {
+  background: #ede0c4;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* HEADER & NAV */
+header {
+  border-bottom: 3px solid #c47a3a;
+}
+header,
+footer {
+  color: #f2eee9;
+  padding: 1rem 2rem;
+}
+
+body > header {
+  margin-bottom: 40px;
+}
+
+header a,
+nav a {
+  color: #333;
+}
+.header-inner,
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header p {
+  margin: 5px 0;
+  font-size: 20px;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav ul li {
+  margin: 5px;
+}
+nav a {
+  padding: 20px 0 40px 20px;
+  text-decoration: none;
+}
+
+/* MAIN */
+.heading {
+  border-radius: 0;
+  border-left: 4px solid #c47a3a;
+  padding-left: 10px;
+}
+.index-hero {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-bottom: 2rem;
+  gap: 20px;
+}
+
+.index-hero img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center 1px;
+  border-radius: 5px;
+}
+.favorite-movies h1 {
+  font-weight: 549;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.movie-card {
+  height: 570px;
+  margin-bottom: 2rem;
+}
+
+.movie-card:hover {
+  opacity: 0.9;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.movie-card img {
+  height: 440px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+th {
+  text-align: left;
+  padding: 10px 12px;
+  background: #ede0c4;
+}
+
+td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e8d9c0;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .movie-card {
+    padding: 20px 20px;
+    margin-bottom: 20px;
+  }
+}
+
+/* MOVIE */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.subtitle {
+  font-style: italic;
+  color: #c47a3a;
+  font-weight: normal;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+  width: 85%;
+  background: #ede0c4;
+  border-left: 3px solid #c47a3a;
+
+  border-radius: 0 10px 10px 0;
+}
+
+.quote1 {
+  height: 200px;
+}
+.quote2 {
+  width: 70%;
+}
+.quote3 {
+  height: 150px;
+}
+
+.quote h2 {
+  font-style: italic;
+  padding: 0 30px;
+  font-weight: normal;
+}
+
+.quote h3 {
+  font-weight: normal;
+  color: #c47a3a;
+  padding-left: 30px;
+}
+.movie-poster img {
+  height: 600px;
+}
+
+.scene-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.favorite-scenes {
+  margin-bottom: 3rem;
+}
+
+.favorite-scene-card img {
+  height: 280px;
+}
+
+.favorite-scene-card p {
+  margin-top: 0;
+}
+
+iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  border-radius: 5px;
+}
+.trailer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 3rem;
+}
+.cast ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  flex-wrap: nowrap;
+}
+
+.cast li {
+  padding: 0 1rem;
+  border-left: 1px solid #c47a3a;
+}
+
+.cast li:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+/* ABOUT */
+.about {
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+.about img {
+  height: 600px;
+  border-radius: 5px;
+}
+
+/* FOOTER */
+footer {
+  border-top: 3px solid #c47a3a;
+  margin-top: 50px;
+}
+
+footer p {
+  color: #333;
+}
